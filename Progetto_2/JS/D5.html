@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D5</title>
+</head>
+<body>
+    <p>ESERCIZIO 1 :Dato il seguente array, scrivi del codice per stampare ogni elemento dell'array in console.</p>
+        <script>
+            const pets = ['dog', 'cat', 'hamster', 'redfish']
+            for(var i = 0; i < pets.length; i++){
+            console.log(pets[i]);
+            }
+        </script>
+
+    <p>ESERCIZIO 2 :Scrivi del codice per ordinare alfabeticamente gli elementi dell'array "pets".</p>
+    <script>
+        var pets2 = pets.sort()
+        console.log(pets2) 
+    </script>
+
+    <p>ESERCIZIO 3 Scrivi del codice per stampare nuovamente in console gli elementi dell'array "pets", questa volta in ordine invertito.</p>
+        <script>
+            var pets3 = pets.reverse()
+            console.log(pets3)
+        </script>
+    
+    <p>ESERCIZIO 4 Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.</p>
+    <script>
+       function moveToLastElement(pets) {
+        let firstElement = pets[0]
+        pets.shift()
+        pets.push(firstElement)
+        return pets 
+       }
+       console.log(moveToLastElement(pets))
+    </script>
+
+    <p>ESERCIZIO 5 Dato il seguente array di oggetti, scrivi del codice per aggiungere ad ognuno di essi una proprietà "licensePlate" con valore a tua scelta.</p>
+        <script>
+            const cars = [
+            {
+            brand: 'Ford',
+            model: 'Fiesta',
+            color: 'red',
+            trims: ['titanium', 'st', 'active'],
+            },
+            {
+            brand: 'Peugeot',
+            model: '208',
+            color: 'blue',
+            trims: ['allure', 'GT'],
+            },
+            {
+            brand: 'Volkswagen',
+            model: 'Polo',
+            color: 'black',
+            trims: ['life', 'style', 'r-line'],
+            },
+            ]
+            
+            for (let i = 0; i < cars.length; i++) {
+            let car = cars[i];
+            car.licensePlate = "NGL975"
+            }
+
+            console.log(cars);
+        </script>
+    
+    <p>ESERCIZIO 6 Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
+        Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.</p>
+        <script>
+            let newCar = {
+                brand: 'Fiat',
+                model: 'Panda',
+                color: 'black',
+                trims: ['non', 'so', 'cosa', 'significa', 'trims'],
+                licensePlate: 'NGL975'
+            }
+            cars.push(newCar);
+            console.log(cars);
+        </script>
+        <!------------------------------------------------>
+        <script>
+            for (let i = 0; i < cars.length; i++) {
+            let car2 = cars[i];
+            car2.trims.pop();
+            }
+
+            console.log(cars);
+        </script>
+
+    <p>ESERCIZIO 7 Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.</p>
+        <script>
+            const justTrims = []
+
+        </script>
+    
+    <p>ESERCIZIO 8 Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
+        "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".</p>
+        <script>
+           for (let i = 0; i < cars.length; i++) {}
+            
+        </script>
+
+    <p>ESERCIZIO 9 Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.</p>
+        
+        <script>
+            const numericArray = [
+            6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
+            ]
+            
+            let i = 0
+            while (i < numericArray.length && numericArray[i] < 32) {
+                i++
+                console.log(numericArray[i])
+            }
+        </script>
+        
+    <p>ESERCIZIO 10 Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
+        dell'alfabeto italiano.
+        es. [f, b, e] --> [6, 2, 5]</p>
+        <!--NOTA: 
+            In console continua a stampare che number non è definito. 
+            Ho deciso di inserire comunque il procedimento perché non capisco dove sia l'errore.-->
+        <script>
+            const charactersArray = ['g', 'n', 'u', 'z', 'd'];
+    
+            var charactersArray2 = []
+            
+                for(i=0; i<charactersArray.length; i++);{
+    
+                let number = charactersArray[i];
+                switch(number) {
+                    case 'g': charactersArray2.push(7);
+                    break;
+    
+                    case 'n': charactersArray2.push(21);;
+                    break;
+    
+                    case 'u': charactersArray2.push(7);;
+                    break;
+    
+                    case 'z': charactersArray2.push(26);;
+                    break;
+    
+                    case 'n': charactersArray2.push(4);;
+                    break;
+                    default:
+                }}
+            console.log(number);   
+        </script>
+</body>
+</html>
